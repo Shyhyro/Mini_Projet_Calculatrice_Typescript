@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+}
+
+table, table input, button {
+    font-size: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+table td, span {
+    padding: 5px 10px;
+    width: 100px;
+}
+
+td:hover {
+    cursor: pointer;
+    background-color: lightblue;
+}
