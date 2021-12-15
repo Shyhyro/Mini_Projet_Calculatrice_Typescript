@@ -1,33 +1,35 @@
-let result = document.getElementById('result');
-const calculate = document.getElementById('calculate');
-let go = document.getElementById('go');
+import "./css/front.css";
 
-let chiffre = document.querySelectorAll(".elements");
+let result = document.getElementById('result') as HTMLElement;
+const calculate = document.getElementById('calculate') as HTMLElement;
+let go = document.getElementById('go') as HTMLElement;
 
-let stringArray = [];
+let chiffre: NodeListOf<Element> = document.querySelectorAll(".elements");
 
-for (let i=0; i<chiffre.length; i++) {
-    chiffre[i].addEventListener('click', function () {
+let stringArray: string[] = [];
 
-        calculate.innerHTML += this.innerHTML + " + ";
+for (let i = 0; i < chiffre.length; i++) {
+    chiffre[i].addEventListener('click', function ():void {
 
-        stringArray.push(this.innerHTML);
+        calculate.innerHTML += chiffre[i].innerHTML + " + ";
+
+        stringArray.push(chiffre[i].innerHTML);
 
         console.log(stringArray);
     })
 }
 
-go.addEventListener('click', function () {
-    let numberArray=[];
+go.addEventListener('click', function ():void {
+    let numberArray:number[] = [];
 
-    for(let i=0; i<stringArray.length ; i++)
+    for(let i:number = 0 ; i<stringArray.length ; i++)
     {
         numberArray[i]= parseFloat(stringArray[i]);
     }
 
     let total = 0;
 
-    for (let i =0; i< numberArray.length ;i++){
+    for (let i:number = 0; i< numberArray.length ;i++){
         total= total+ numberArray[i];
     }
 
