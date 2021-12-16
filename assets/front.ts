@@ -37,8 +37,3 @@ go.addEventListener('click', function ():void {
     result.innerHTML=total.toString();
 
 })
-
-//
-// document.getElementById('add').addEventListener('click', function () {
-//     stringArray.push(calculate.innerHTML);
-// })
